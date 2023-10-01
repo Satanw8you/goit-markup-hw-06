@@ -109,12 +109,11 @@ header .container {
 .title-header {
   color: #ffffff;
   text-align: center;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  line-height: 1.11;
   letter-spacing: 0.02em;
-  max-width: 496px;
-  justify-content: center;
+  max-width: 288px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -509,11 +508,6 @@ header .container {
 /* Modal form */
 
 .backdrop {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.is-open {
   opacity: 1;
   visibility: visible;
   position: fixed;
@@ -523,6 +517,11 @@ header .container {
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-open {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .modal {
@@ -802,7 +801,6 @@ header .container {
 }
 .mobile-menu-socials {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 40px;
 }
@@ -918,6 +916,14 @@ header .container {
     max-width: 768px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/mainbackground-tab.jpg);
   }
+  .title-header {
+    font-size: 56px;
+    max-width: 496px;
+    line-height: 1.07;
+  }
+  .strategy-container-title {
+    text-align: left;
+  }
   .title-conteiner-button {
     margin: 36px auto 0;
   }
@@ -953,8 +959,10 @@ header .container {
     flex-wrap: wrap;
     flex-direction: row;
     column-gap: 24px;
-    row-gap: 72px;
     justify-content: flex-start;
+  }
+  .footer-input {
+    opacity: 1;
   }
   .footer-top {
     align-items: flex-start;
@@ -1004,7 +1012,7 @@ header .container {
   .title-conteiner {
     padding: 188px 0;
     max-width: 1440px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/mainbackground.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/mainbackground-min.jpg);
   }
   .title-conteiner-button {
     margin: 48px auto 0;
@@ -1070,6 +1078,7 @@ header .container {
     margin-bottom: 0;
   }
   .footer-socials {
+    display: block;
     margin-bottom: 0;
   }
   .footer-bot {
@@ -1133,28 +1142,14 @@ header .container {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1157.98px) {
+  .main-logo {
+    margin-right: 120px;
+  }
   .footer .container {
-    padding: 0 108px;
-  }
-  .footer-top {
-    margin-bottom: 0;
-  }
-  .footer-socials {
-    margin-bottom: 0;
+    max-width: 584px;
   }
   .footer-socials {
     display: block;
-  }
-}
-
-@media screen and (min-width: 375px) and (max-width: 767.98px) {
-  .mobile-menu-list {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .mobile-contacts {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
